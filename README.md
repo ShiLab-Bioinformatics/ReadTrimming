@@ -1,9 +1,9 @@
-## Read-Trimming
+# Read-Trimming
 
-# Code
+## Code
 Our programs for trimming reads, mapping reads, calculating numbers are in this project.
 
-# Data
+## Data
 Our data will be shared on https://www.onedrive.com/
 
 But not yet.
