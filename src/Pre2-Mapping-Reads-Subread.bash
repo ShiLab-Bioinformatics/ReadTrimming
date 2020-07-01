@@ -46,7 +46,11 @@ do
 				r2=hg38-Adaptor-${bv}_R2.fastq.gz
 		  fi
 		fi
-		$sr -F SAF -a /export/share/elvis/bioinf/liao/Subread-1.6.4/annotation/hg38_RefSeq_exon.txt -r $r1 -R $r2 -i $index -o Mapped-$test-$purp-$trimmer.bam -T8 --multiMapping -t0
+		if test -f Mapped-$test-$purp-$trimmer.bam.indel.vcf
+		then
+			continue
+		fi
+		$sr -F SAF -a hg38_RefSeq_exon.txt -r $r1 -R $r2 -i $index -o Mapped-$test-$purp-$trimmer.bam -T8 --multiMapping -t0
 	done
   done
 done
@@ -67,5 +71,10 @@ do
 		R=$test.fastq.gz
 	fi
   done
-  $sr -F SAF -a /export/share/elvis/bioinf/liao/Subread-1.6.4/annotation/hg38_RefSeq_exon.txt -r $R -i $index -o Mapped-$test-$trimmer.bam -T8 --multiMapping -t0
+
+  if test -f Mapped-$test-$trimmer.bam.indel.vcf
+  then
+	continue
+  fi
+  $sr -F SAF -a hg38_RefSeq_exon.txt -r $R -i $index -o Mapped-$test-$trimmer.bam -T8 --multiMapping -t0
 done

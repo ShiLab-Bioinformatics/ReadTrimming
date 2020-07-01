@@ -18,7 +18,7 @@ do
 done
 
 
-for test in SEQC-A SEAC-B Simu0010 Simu0050 Simu0100 
+for test in SEQC-A SEQC-B Simu0010 Simu0050 Simu0100 
 do
 	ADA_MA=10
 	ADA_FA=TruSeq3-PE.fa
@@ -61,7 +61,6 @@ do
 	$galore $GALORE_ADAPTOR $R1 $R2 --basename Trimmed-GaloreAda-$test &> Trimmed-GaloreAda-$test.log
 	$matic $MARIC_OPT $R1 $R2 -baseout Trimmed-MaticAda-$test.fq.gz  $MATIC_TRIMMERS_ADAPTOR &> Trimmed-MaticAda.fq.gz.log
 done
-
 
 
 galore=trim_galore

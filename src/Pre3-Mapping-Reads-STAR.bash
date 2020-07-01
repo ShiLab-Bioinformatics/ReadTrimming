@@ -2,6 +2,14 @@ st=STAR
 index=STAR273a-hg38-hasAnno
 purp=Normal
 
+
+mkdir -p $index
+
+zcat  hg38.fasta.gz >  hg38.fasta
+
+STAR --runMode genomeGenerate --genomeDir $index --genomeFastaFiles hg38.fasta\
+     --sjdbGTFfile hg38.GTF
+
 for test in SEQC-A SEQC-B 
 do
 	trimmer=RAW 

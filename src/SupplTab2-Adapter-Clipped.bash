@@ -1,9 +1,14 @@
+echo
+echo This script calculates the fractions of clipped bases and adapter bases
+echo "Every two columns are for a data set: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
+echo "Within the two columns for each dataset, the values are Adapter-bases% amd Clipped-bases-in-Adapter%"
+echo
 
-for trimmer in  maticWindow maticInfo galore Atropos
+for trimmer in  galore # maticWindow maticInfo galore 
 do
   printf $trimmer
   printf "\t"
-  for t in  SEQC-A SEQC-B  SEQC50-A SEQC50-B Simu0010 Simu0050 Simu0100 
+  for t in  SEQC-A SEQC-B  Simu0010 Simu0050 Simu0100 
   do
 	ada_trimmer=galore
     if [[ $trimmer =~ matic ]]

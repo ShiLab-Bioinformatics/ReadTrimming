@@ -4,15 +4,22 @@ purp=Normal
 
 echo 
 echo  ==== Subread ALIGNER TESTS ====
+echo "The columns are SEQC-A SEQC-B Chopped-SEQC-A (50bp) Chopped-SEQC-B (50bp) Simu:0.1% Simu:0.5% Simu:1%"
 echo 
 
 for trimmer in RAW maticWindow maticInfo galore
 do
   printf $trimmer
   printf "\t"
-  for t in  SEQC-A SEQC-B Simu0010 Simu0050 Simu0100
+  for t in  SEQC-A SEQC-B Chopped-SEQC-A Chopped-SEQC-B Simu0010 Simu0050 Simu0100
   do
-	fn=Mapped-$t-$purp-$trimmer.bam
+    if [[ $t =~ Chop ]]
+	then
+	  fn=Mapped-$t-$trimmer.bam
+	else
+	  fn=Mapped-$t-$purp-$trimmer.bam
+	fi
+    #$fc -a $anno -o del4-genes.txt0 -T6 -p -M -F SAF $fn 
     nohup $fc -a $anno -o del4-genes.txt0 -T6 -p -M -F SAF $fn &>/dev/null
 	cat del4-genes.txt0|grep -v ^# |grep -v Leng |cut -f 1,7>del4-genes.txt
 
@@ -33,6 +40,7 @@ done
 
 echo 
 echo  ==== OTHER ALIGNER TESTS ====
+echo "The columns are SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
 echo 
 
 for mode in  RAW-STAR RAW-STAR-E2E

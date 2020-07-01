@@ -1,6 +1,8 @@
+echo
+echo "This script gives fractions of mapped reads and mapped read-bases."
+echo "Column order: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
 for fii in READS READ-BASES
 do
-		echo
 		echo
 		echo "====== MAPPED $fii ======"
 		purp=Normal
