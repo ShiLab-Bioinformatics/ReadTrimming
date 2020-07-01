@@ -4,7 +4,7 @@ echo "Every two columns are for a data set: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Si
 echo "Within the two columns for each dataset, the values are Adapter-bases% amd Clipped-bases-in-Adapter%"
 echo
 
-for trimmer in  galore # maticWindow maticInfo galore 
+for trimmer in maticWindow maticInfo galore 
 do
   printf $trimmer
   printf "\t"

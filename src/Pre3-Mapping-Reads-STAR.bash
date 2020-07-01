@@ -5,7 +5,10 @@ purp=Normal
 
 mkdir -p $index
 
-zcat  hg38.fasta.gz >  hg38.fasta
+if ! test -f hg38.fasta
+then
+	zcat  hg38.fasta.gz >  hg38.fasta
+fi
 
 STAR --runMode genomeGenerate --genomeDir $index --genomeFastaFiles hg38.fasta\
      --sjdbGTFfile hg38.GTF

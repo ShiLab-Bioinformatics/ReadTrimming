@@ -40,14 +40,14 @@ done
 
 echo 
 echo  ==== OTHER ALIGNER TESTS ====
-echo "The columns are SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
+echo "The columns are SEQC-A and SEQC-B "
 echo 
 
 for mode in  RAW-STAR RAW-STAR-E2E
 do
   printf $mode
   printf "\t"
-  for t in  SEQC-A SEQC-B Simu0010 Simu0050 Simu0100
+  for t in  SEQC-A SEQC-B 
   do
 	if [[ $mode =~ "STAR-E2E" ]]
 	then
