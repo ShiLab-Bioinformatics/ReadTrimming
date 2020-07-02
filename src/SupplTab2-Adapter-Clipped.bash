@@ -1,7 +1,7 @@
 echo
 echo This script calculates the fractions of clipped bases and adapter bases
 echo "Every two columns are for a data set: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
-echo "Within the two columns for each dataset, the values are Adapter-bases% amd Clipped-bases-in-Adapter%"
+echo "Within the two columns for each dataset, the values are Adapter-bases% and Clipped-bases-in-Adapter%"
 echo
 
 for trimmer in maticWindow maticInfo galore 
