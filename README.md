@@ -13,8 +13,8 @@ You need to download all the scripts and data files for reproducing all the resu
 1. [Subread (v1.6.4)](https://sourceforge.net/projects/subread/files/)
 2. [Trimmomatic (v0.39)](http://www.usadellab.org/cms/?page=trimmomatic)
 3. [Trim Galore (v0.6.2)](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
-4. [Python (v3.4.0 or newer)](https://www.scipy.org/)
-5. [Numpy](https://numpy.org/) and [Scipy](https://www.scipy.org/) for your Python installation
+4. [Python (v3.4.0 or newer)](https://www.python.org/download/releases/3.0/)
+5. [NumPy](https://numpy.org/) and [SciPy](https://www.scipy.org/) for your Python installation
 
 You may also need some dependent programs for running Trimmomatic and Trim-galore. Please make sure that the executable programs are in PATH, and the JAR file of Trimmomatic is in the current directory. 
 
