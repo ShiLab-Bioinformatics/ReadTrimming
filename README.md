@@ -15,6 +15,7 @@ You need to download all the scripts and data files for reproducing all the resu
 3. [Trim Galore (v0.6.2)](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
 4. [Python (v3.4.0 or newer)](https://www.python.org/downloads/)
 5. [NumPy](https://numpy.org/) and [SciPy](https://www.scipy.org/) for your Python installation
+6. [Bash (any modern version should be OK)](https://www.gnu.org/software/bash/)
 
 You may also need some dependent programs for running Trimmomatic and Trim-galore. Please make sure that the executable programs are in PATH, and the JAR file of Trimmomatic is in the current directory. 
 
