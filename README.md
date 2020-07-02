@@ -1,7 +1,7 @@
 # Read-Trimming
 
 ## Scripts 
-Our scripts are shared in the /src directory. The entry of the analysis is "Rerun-Analysis.bash", which in tern invokes other shell scripts and Python programs to produce results.
+Our scripts are shared in the /src directory. The entry of the analysis is "Rerun-Analysis.bash", which in turn invokes other shell scripts and Python programs to produce results.
 
 ## Data
 Our data is shared on
