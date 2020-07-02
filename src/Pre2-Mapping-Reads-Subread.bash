@@ -1,6 +1,8 @@
 index=idx_hg38_full_index
 sr=subread-align 
 
+subread-buildindex -F -o $index -B hg38.fastq.gz
+
 for test in Simu0010 Simu0050 Simu0100 SEQC-A SEQC-B
 do
   for trimmer in maticWindow maticInfo galore RAW galoreAda maticAda
