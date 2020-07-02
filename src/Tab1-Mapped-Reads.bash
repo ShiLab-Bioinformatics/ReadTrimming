@@ -1,9 +1,9 @@
 echo
 echo "This script gives fractions of mapped reads and mapped read-bases."
-echo "The results are in Tab 1 (read bases trimmed off by read trimmers and read bases soft-clipped by Subread)."
+echo "The results are in Tab 1 (Percentages of mapped read bases with or without read trimming)."
 echo "Column order: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
 echo
-for fii in READS READ-BASES
+for fii in READ-BASES
 do
 		echo
 		echo "====== MAPPED $fii ======"
