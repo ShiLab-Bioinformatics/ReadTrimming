@@ -1,14 +1,18 @@
+echo 
+echo "This script generates results for Suppl Tab S3"
+echo "columns: SEQC-A and SEQC-B"
+echo
+
 fc=featureCounts
+annot="hg38_RefSeq_exon.txt -F SAF"
 for trimmer1 in RAW galore maticWindow maticInfo
 do
 	for test in SEQC-A SEQC-B
 	do
 		f1=Mapped-$test-Normal-$trimmer1.bam
-		nohup $fc -a hg38_RefSeq_exon.txt -F SAF -T6 -R SAM -p -o annot-1.FC $f1 &>/dev/null&
-		pids="$pids $!"
+		nohup $fc -M -O -a $annot -T6 -o del4-nomatter.FC -R SAM $f1 &>/dev/null
 	done
 done
-wait $pids
 
 for trimmer1 in RAW galore maticWindow maticInfo
 do
@@ -19,19 +23,10 @@ do
 			printf "$trimmer1\t$trimmer2\t"
 			for test in SEQC-A SEQC-B
 			do
-			  {
 				f1=Mapped-$test-Normal-$trimmer1.bam
 				f2=Mapped-$test-Normal-$trimmer2.bam
 				xx=$( python SupplTab3-Match-Read-Pos.py $f1.featureCounts.sam $f2.featureCounts.sam  )
-				printf "%s %s %s" $trimmer1 $trimmer2 $test
-				printf "\t"
-				printf "$xx"
-				printf "\t"
-				echo
-				echo
-				echo
-				echo
-			  }&
+				printf "%s\t" $xx
 			done 
 			echo
 		fi

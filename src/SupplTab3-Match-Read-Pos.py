@@ -67,5 +67,5 @@ for k in all_keys.keys():
 	else: UU+=1
 
 
-print("%.4f"%( (UU+MM_match)*1./(MM_match+ MM_unmatch+ MU+ UM+ UU)))
+print("%.4f"%( (UU+MM_match)*1./( MM_match+MM_unmatch+MU+UM+UU )))
 #print("DEBUG  ", MM_match, MM_unmatch, MU, UM, UU )
