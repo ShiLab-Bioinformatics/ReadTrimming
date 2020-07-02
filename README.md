@@ -10,11 +10,11 @@ Our data is shared on
 ## Reproduce the results
 You need to download all the scripts and data files for reproducing all the results in the paper. Please save all the data files downloaded from the OneDrive link above into the folder that also contains all the scripts, then run Rerun-Analysis.bash using BASH. You need to have the programs listed below for running this analysis.
 
-1. Subread (v1.6.4)
-2. Trimmomatic (v0.39)
-3. Trim-galore (v0.6.2)
-4. Python (v3.4.0 or newer)
-5. Numpy and Scipy for your Python installation
+1. [Subread (v1.6.4)](https://sourceforge.net/projects/subread/files/)
+2. [Trimmomatic (v0.39)](http://www.usadellab.org/cms/?page=trimmomatic)
+3. [Trim Galore (v0.6.2)](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
+4. [Python (v3.4.0 or newer)](https://www.scipy.org/)
+5. [Numpy](https://numpy.org/) and [Scipy](https://www.scipy.org/) for your Python installation
 
 You may also need some dependent programs for running Trimmomatic and Trim-galore. Please make sure that the executable programs are in PATH, and the JAR file of Trimmomatic is in the current directory. 
 
