@@ -3,7 +3,10 @@ anno=hg38_RefSeq_exon.txt
 purp=Normal
 
 echo 
-echo  ==== Subread ALIGNER TESTS ====
+echo "This script calculates the correlations between read-mapping and counting results with known truths."
+echo "The results are in Tab 2 (real data, Subread) and Suppl Tab S4 (simulation) and S6 (reaal data, STAR)"
+echo 
+echo  ==== Subread TESTS ====
 echo "The columns are SEQC-A SEQC-B Chopped-SEQC-A (50bp) Chopped-SEQC-B (50bp) Simu:0.1% Simu:0.5% Simu:1%"
 echo 
 
@@ -39,7 +42,7 @@ do
 done
 
 echo 
-echo  ==== OTHER ALIGNER TESTS ====
+echo  ==== STAR TESTS ====
 echo "The columns are SEQC-A and SEQC-B "
 echo 
 

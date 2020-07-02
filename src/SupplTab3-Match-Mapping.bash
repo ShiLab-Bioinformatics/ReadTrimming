@@ -1,5 +1,5 @@
 echo 
-echo "This script generates results for Suppl Tab S3"
+echo "This script generates results for Suppl Tab S3 (concordance of reads)"
 echo "columns: SEQC-A and SEQC-B"
 echo
 

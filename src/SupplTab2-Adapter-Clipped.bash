@@ -1,5 +1,7 @@
 echo
 echo This script calculates the fractions of clipped bases and adapter bases
+echo "The results are in Suppl Tab S2 (Adapters reported by each read trimmer and percentages of
+adapter bases soft-clipped by Subread)"
 echo "Every two columns are for a data set: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
 echo "Within the two columns for each dataset, the values are Adapter-bases% and Clipped-bases-in-Adapter%"
 echo

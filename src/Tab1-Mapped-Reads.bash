@@ -1,6 +1,8 @@
 echo
 echo "This script gives fractions of mapped reads and mapped read-bases."
+echo "The results are in Tab 1 (read bases trimmed off by read trimmers and read bases soft-clipped by Subread)."
 echo "Column order: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
+echo
 for fii in READS READ-BASES
 do
 		echo
