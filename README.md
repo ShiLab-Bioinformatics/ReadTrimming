@@ -19,4 +19,4 @@ You need to download all the scripts and data files for reproducing all the resu
 
 You may also need some dependent programs (eg [Cutadapt v1.16](https://cutadapt.readthedocs.io/en/v1.16/)) for running Trimmomatic and Trim-galore. Please make sure that all the executable programs in the above packages are in PATH, and the JAR file of Trimmomatic is in the current directory. Read the BASH scripts for more details.
 
-You need to run the analysis on an x86-64 Linux computer with at least 100GB of free disk space, 8 CPU cores and 64GB of memory.
+You need to run the analysis on an x86-64 Linux computer with at least 1TB of free disk space, 8 CPU cores and 64GB of memory.
