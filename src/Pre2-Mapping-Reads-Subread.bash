@@ -1,7 +1,7 @@
 index=idx_hg38_full_index
 sr=subread-align 
 
-subread-buildindex -F -o $index -B hg38.fastq.gz
+nohup subread-buildindex -F -o $index -B hg38.fasta.gz &>/dev/null
 
 for test in Simu0010 Simu0050 Simu0100 SEQC-A SEQC-B
 do
