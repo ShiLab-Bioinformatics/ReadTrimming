@@ -1,7 +1,7 @@
 echo
 echo "This script gives fractions of mapped reads and mapped read-bases."
-echo "The results are in Tab 1 (Percentages of mapped read bases with or without read trimming)."
-echo "Column order: SEQC-A SEQC-B Simu:0.1% Simu:0.5% Simu:1%"
+echo "The results are presented in Tab 1 (Percentages of mapped read bases with or without read trimming)."
+echo "Column order: SEQC-UHRR, SEQC-HBRR"
 echo
 for fii in READ-BASES
 do
@@ -16,7 +16,7 @@ do
 				printf "\t"
 				printf $aligner
 				printf "\t"
-				for dset in SEQC-A SEQC-B Simu0010 Simu0050 Simu0100 
+				for dset in SEQC-A SEQC-B # Simu0010 Simu0050 Simu0100 
 				do
 					if [[ $aligner == Subread ]]
 					then

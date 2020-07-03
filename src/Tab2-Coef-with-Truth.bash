@@ -1,13 +1,13 @@
-fc=featureCounts
+fc="Rscript Tab2-featureCounts.R"
 anno=hg38_RefSeq_exon.txt
 purp=Normal
 
 echo 
 echo "This script calculates the correlations between read-mapping and counting results with known truths."
-echo "The results are in Tab 2 (real data, Subread) and Suppl Tab S4 (simulation) and S6 (reaal data, STAR)"
+echo "The results are presented in Tab 2 (real data, Subread) and Suppl Tab S4 (simulation) and S6 (reaal data, STAR)."
 echo 
 echo  ==== Subread TESTS ====
-echo "The columns are SEQC-A SEQC-B Chopped-SEQC-A (50bp) Chopped-SEQC-B (50bp) Simu:0.1% Simu:0.5% Simu:1%"
+echo "The columns are SEQC-UHRR, SEQC-HBRR, Chopped-SEQC-A (50bp), Chopped-SEQC-B (50bp), Simu:0.1%, Simu:0.5% and Simu:1%"
 echo 
 
 for trimmer in RAW maticWindow maticInfo galore
@@ -22,9 +22,8 @@ do
 	else
 	  fn=Mapped-$t-$purp-$trimmer.bam
 	fi
-    #$fc -a $anno -o del4-genes.txt0 -T6 -p -M -F SAF $fn 
-    nohup $fc -a $anno -o del4-genes.txt0 -T6 -p -M -F SAF $fn &>/dev/null
-	cat del4-genes.txt0|grep -v ^# |grep -v Leng |cut -f 1,7>del4-genes.txt
+	rm -f del4-genes.txt
+    nohup $fc del4-genes.txt $fn &>/dev/null
 
     rrv=$(if [[ $t =~ Simu ]]
 	then
@@ -43,7 +42,7 @@ done
 
 echo 
 echo  ==== STAR TESTS ====
-echo "The columns are SEQC-A and SEQC-B "
+echo "The columns are SEQC-UHRR and SEQC-HBRR "
 echo 
 
 for mode in  RAW-STAR RAW-STAR-E2E
@@ -60,9 +59,8 @@ do
 		fn=STAR-$t-RAW.bamAligned.out.bam
 	fi
 
-    nohup $fc -a $anno -o del4-genes.txt0 -T6 -p -M -F SAF $fn &>/dev/null
-	cat del4-genes.txt0|grep -v ^# |grep -v Leng |cut -f 1,7>del4-genes.txt
-
+	rm -f del4-genes.txt
+    nohup $fc del4-genes.txt $fn &>/dev/null
 
     rrv=$(if [[ $t =~ Simu ]]
 	then

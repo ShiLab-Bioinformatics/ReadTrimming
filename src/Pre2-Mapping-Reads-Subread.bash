@@ -1,7 +1,7 @@
-index=idx_hg38_full_index
-sr=subread-align 
-
-nohup subread-buildindex -F -o $index -B hg38.fasta.gz &>/dev/null
+if ! test -f Idx-hg38-full.00.b.tab
+then
+	nohup Rscript Pre2-Subread-Index.R &> /dev/null
+fi
 
 for test in Simu0010 Simu0050 Simu0100 SEQC-A SEQC-B
 do
@@ -52,7 +52,7 @@ do
 		then
 			continue
 		fi
-		$sr -F SAF -a hg38_RefSeq_exon.txt -r $r1 -R $r2 -i $index -o Mapped-$test-$purp-$trimmer.bam -T8 --multiMapping -t0
+		nohup Rscript Pre2-Subread-Run.R $r1 $r2 Mapped-$test-$purp-$trimmer.bam  &>/dev/null
 	done
   done
 done
@@ -78,5 +78,5 @@ do
   then
 	continue
   fi
-  $sr -F SAF -a hg38_RefSeq_exon.txt -r $R -i $index -o Mapped-$test-$trimmer.bam -T8 --multiMapping -t0
+  nohup Rscript Pre2-Subread-Run.R $R NA Mapped-$test-$purp-$trimmer.bam  &>/dev/null
 done
