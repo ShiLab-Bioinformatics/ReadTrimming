@@ -74,3 +74,4 @@ do
   done
   echo
 done
+echo "The results for Subread-UHRR and Subread-HBRR are in the Subread result table."
