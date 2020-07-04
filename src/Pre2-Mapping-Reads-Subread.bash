@@ -1,3 +1,8 @@
+if ! test -f hg38.fasta
+then
+	zcat  hg38.fasta.gz >  hg38.fasta
+fi
+
 if ! test -f Idx-hg38-full.00.b.tab
 then
 	nohup Rscript Pre2-Subread-Index.R &> /dev/null
