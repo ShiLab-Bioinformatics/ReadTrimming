@@ -21,6 +21,6 @@ All the code can be found in the /src directory. To reproduce the results report
 
 You need to make sure that the path to executables in these installed programs should be included in your PATH environment variable. The JAR file of Trimmomatic should be included in your current working directory. More details can be found in the shell scripts.
 
-After setting up the environment and downloading all the data, you can simply run **Rerun-Analysis.bash** to reproduce all the results included in the paper. This shell script invokes other shell and R scripts, and Python programs.
+After setting up the environment and downloading all the data, you can simply run **Rerun-Analysis.bash** to reproduce all the results included in the paper. This shell script invokes other Bash scripts, which perform analyses and produce results.
 
 It is recommended to run the analyses on an x86-64 Linux computer with at least 1TB of free disk space, 8 CPU cores and 64GB of memory.
