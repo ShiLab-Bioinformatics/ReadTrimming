@@ -57,6 +57,7 @@ do
   done
 done
 
+purp=Normal
 for test in Chopped-SEQC-A Chopped-SEQC-B
 do
   for trimmer in maticWindow maticInfo galore RAW
@@ -64,19 +65,20 @@ do
 	R=Trimmed-Galore-$test-Normal_trimmed.fq.gz
 	if [[ $trimmer == maticWindow ]]
 	then
-		R=Trimmed-MaticWindow-$test-Normal_trimmed.fq.gz
+		R=Trimmed-MaticWindow-$test-Normal.fq.gz
 	elif [[ $trimmer == maticInfo ]]
 	then
-		R=Trimmed-MaticInfo-$test-Normal_trimmed.fq.gz
+		R=Trimmed-MaticInfo-$test-Normal.fq.gz
 	elif [[ $trimmer == RAW ]]
 	then
 		R=$test.fastq.gz
 	fi
-  done
 
-  if test -f Mapped-$test-$trimmer.bam.indel.vcf
-  then
-	continue
-  fi
-  nohup Rscript Pre2-Subread-Run.R $R NA Mapped-$test-$purp-$trimmer.bam  &>/dev/null
+    if test -f Mapped-$test-$purp-$trimmer.bam.indel.vcf
+    then
+  	  continue
+    fi
+    nohup Rscript Pre2-Subread-Run.R $R NA Mapped-$test-$purp-$trimmer.bam  &>/dev/null
+#    Rscript Pre2-Subread-Run.R $R NA Mapped-$test-$purp-$trimmer.bam  
+  done
 done

@@ -16,14 +16,10 @@ do
   printf "\t"
   for t in  SEQC-A SEQC-B Chopped-SEQC-A Chopped-SEQC-B Simu0010 Simu0050 Simu0100
   do
-    if [[ $t =~ Chop ]]
-	then
-	  fn=Mapped-$t-$trimmer.bam
-	else
-	  fn=Mapped-$t-$purp-$trimmer.bam
-	fi
+	fn=Mapped-$t-$purp-$trimmer.bam
 	rm -f del4-genes.txt
     nohup $fc del4-genes.txt $fn &>/dev/null
+#    $fc del4-genes.txt $fn 
 
     rrv=$(if [[ $t =~ Simu ]]
 	then

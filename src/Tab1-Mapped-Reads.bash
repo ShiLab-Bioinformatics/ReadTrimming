@@ -10,7 +10,7 @@ do
 		purp=Normal
 		for trimmer in RAW maticWindow maticInfo galore 
 		do
-			for aligner in Subread STAR
+			for aligner in Subread # STAR
 			do
 				printf $trimmer
 				printf "\t"
