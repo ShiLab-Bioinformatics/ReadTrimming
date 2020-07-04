@@ -17,6 +17,7 @@ All the code can be found in the /src directory. To reproduce the results report
 6. [NumPy](https://numpy.org/) and [SciPy](https://www.scipy.org/) for your Python installation
 7. [Bash (any modern version should be OK)](https://www.gnu.org/software/bash/)
 8. [Samtools (v0.1.15 or newer)](http://www.htslib.org/)
+9. [STAR (v2.7.3a)](https://github.com/alexdobin/STAR/releases/tag/2.7.3a)
 
 You need to make sure that the path to executables in these installed programs should be included in your PATH environment variable. The JAR file of Trimmomatic should be included in your current working directory. More details can be found in the shell scripts.
 
