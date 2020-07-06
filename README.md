@@ -10,7 +10,7 @@ https://latrobeuni-my.sharepoint.com/:f:/g/personal/yliao_ltu_edu_au/EgBbclblJpF
 All the code can be found in the /src directory. To reproduce the results reported in the paper, you will need to download all the data and code and save them to the same directory. You also need to install the following programs:
 
 1. [The R environment](https://www.r-project.org/)
-2. [Rsubread (v1.32.3)](https://bioconductor.org/packages/3.8/bioc/src/contrib/Archive/Rsubread/)
+2. [Rsubread (v2.2.3)](https://bioconductor.org/packages/release/bioc/html/Rsubread.html)
 3. [Trimmomatic (v0.39)](http://www.usadellab.org/cms/?page=trimmomatic)
 4. [Trim Galore (v0.6.2)](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
 5. [Python (v3.4.0 or newer)](https://www.python.org/downloads/)
