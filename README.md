@@ -1,5 +1,5 @@
 # Read-Trimming
-Yang Liao and Wei Shi. "Read trimming is not required for mapping and quantification of RNA-seq reads at the gene level". Accepted for publication by [NAR Genomics and Bioinformatics]{https://academic.oup.com/nargab}.
+Yang Liao and Wei Shi. "Read trimming is not required for mapping and quantification of RNA-seq reads at the gene level". Accepted for publication by [NAR Genomics and Bioinformatics](https://academic.oup.com/nargab).
 
 ## Data
 All the data included in this study can be downloaded from the link:
